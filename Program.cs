@@ -8,15 +8,22 @@ namespace OOP2
 {
 	class Program
 	{
+		public int ProbniBroj = 100;
+		public static int ProbniBroj2 = 200;
+
 		static void Main(string[] args)
 		{
+			Program.ProbniBroj2++;
+			Program p = new Program();
+			p.ProbniBroj++;
+
 			int[] niz = { 5, 10 };
 
 			Osoba Pera = new Osoba("Pera", "Peric");
 			int zbir = Pera.Sabirac(niz);
 
 			Osoba Marko = new Osoba();
-			
+
 			
 			
 			Console.WriteLine($"X:{niz[0]} Y:{niz[1]}");
@@ -26,11 +33,25 @@ namespace OOP2
 
 			Console.WriteLine($"X:{niz[0]} Y:{niz[1]}");
 			Console.ReadKey();
+			
+			Osoba o = new Osoba();
+			o.Sabirac(niz);
+
+			int asd = 5;
+			asd.ToString();
+
+			int.Parse("41");
+			Osoba.FooBar();
 		}
 	}
 
 	class Osoba
 	{
+		public static void FooBar()
+		{
+			Console.WriteLine("asd");
+		}
+		public static string test;
 		//Stanja
 		public string ime;
 		public string prezime;
